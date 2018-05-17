@@ -5,7 +5,7 @@ Normal human connections only do start once based on ip.
 ```
 
 
-**GET** /start
+**GET** `/start`
 ```
 UUID:  [\w]{,8}
 TOKEN: [\w\D]{,8}
@@ -14,7 +14,7 @@ SERVERS []
 
 ```
 
-**POST** /connect form: uuid, token
+**POST** `/connect form: uuid, token`
 ```
 event logged_in
 
@@ -23,12 +23,15 @@ Websocket ID
 ```
 
 # Websocket Events
-**RECIEVE** connected(shard)
+**RECIEVE** `connected(shard)`
 `connected(blob2)`
 
-**SEND** message(content)
+**SEND** `message(content)`
+
 `message("Hello World!")`
-**RECIEVE** message(user, content)
+
+**RECIEVE** `message(user, content)`
+
 `message("AbCDe1234", "Hello World")`
 
 **SEND** disconnect(type, reason)
