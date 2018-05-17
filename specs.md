@@ -11,7 +11,6 @@ UUID:  [\w]{,8}
 TOKEN: [\w\D]{,8}
 
 SERVERS []
-
 ```
 
 **POST** `/connect form: uuid, token`
